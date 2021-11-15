@@ -1,7 +1,7 @@
 const contents = () => {
     const mbti = [ "ENFP", "ENFJ", "ENTP", "ENTJ", "ESFP", "ESFJ", "ESTJ", "ESTP", "INFJ",
                    "INFP", "INTJ", "INTP", "ISFJ", "ISFP", "ISTJ", "ISTP" ];
-    const MbtiList = mbti.map((mbti, i) => (<li key={i}>{mbti}</li>));
+    const MbtiList = mbti.map((mbti, i) => (<li><a key={i}>{mbti}</a></li>));
     return(
         <div className="contents">
             <div className="side">
