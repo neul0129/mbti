@@ -1,10 +1,14 @@
+html {
+  background: rgba(0,0,0,.05);
+}
 body {
   margin : 0 30px;
 }
 
 /* heaer  */
 .header {
-  width: 100%;
+  background-color: #343131;
+  color: #d9d9d9;
   height: 60px;
   border: 1px solid black;
   display: flex;
@@ -16,6 +20,9 @@ body {
 }
 .login{
   margin-right: 20px;
+  background-color: #343131;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* contents */
@@ -23,26 +30,40 @@ body {
   width: 100%;
   height: 655px;
   margin: 0 auto;
+  background-color: #fff;
 }
 .side {
-  border: 1px solid black;
   float: left;
-  width: 15%;
+  width: 120px;
   height: 100%;
+  box-sizing: border-box;
+  background-color: #343131;
+  color: #d9d9d9;
+  margin-top: 1px;
 }
-.side > ul {
-  list-style: none;
+.side > div {
   line-height: 30px;
-  
+  text-align: center;
+}
+.side > div > a {
+  color: #d9d9d9;
+  text-decoration: #d9d9d9;
 }
 .article {
   border: 1px solid black;
-  float: right;
-  width: 84%;
+  width: 100%;
   height: 100%;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 /* footer */
 .footer {
+  background-color: #343131;;
+  color: #d9d9d9;
   border: 1px solid black;
+}
+
+.displayNone {
+  display: none;
 }
