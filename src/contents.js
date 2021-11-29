@@ -8,7 +8,14 @@ const Contents = (props) => {
     const MbtiList = mbti.map((mbti, i) => (<div className="mbtiList" data-index={i} onClick={click}>
     <a className="mbtiListA" href="/" data-index={i} style ={{'backgroundColor':'#343131'}}>{mbti} </a></div>));
 
-    console.log(MbtiList)
+    let displayNone = 
+    {  
+        display: "none"
+    }
+    const displaySideNone = () => {
+    document.querySelectorAll(".side").style.display = 'none';
+    }
+    
     
     const [selectedIndex, setSelectedIndex]=useState(0);
 function click(e){
@@ -21,16 +28,14 @@ function click(e){
         document.querySelectorAll(".mbtiListA")[e.currentTarget.dataset.index].style.backgroundColor = '#fff';
         document.querySelectorAll(".mbtiListA")[e.currentTarget.dataset.index].style.color = 'black';
     }
-    // const display = document.querySelectorAll(".side").style.display = "none";
     const isSmallScreen = useMediaQuery({
         query: "(max-width: 767px)",
       });
     return(
         <div className="contents">
-            <div className="side">      
-            {/* {isSmallScreen ? '' :  {MbtiList}.array} */}
-            {isSmallScreen &&  <div style={"display:none"}></div>}
-                    {MbtiList} 
+            <div className="side">
+            {/* {isSmallScreen ? <div style={displayNone}></div> : MbtiList} */}
+            {isSmallScreen ? displaySideNone : MbtiList}
             </div>
             <div className="article">
                 <h2>{props.title}</h2>
